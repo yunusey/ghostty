@@ -466,6 +466,14 @@ foreground: Color = .{ .r = 0xFF, .g = 0xFF, .b = 0xFF },
 ///   * `tiled` - Image is repeated horizontally and vertically to fill the window.
 ///   * `centered` - Image is centered in the window and displayed 1-to-1 pixel
 ///     scale, preserving both the aspect ratio and the image size.
+///   * `upper-left` - Image is anchored to the upper left corner of the window,
+///     preserving the aspect ratio.
+///   * `upper-right` - Image is anchored to the upper right corner of the window,
+///     preserving the aspect ratio.
+///   * `lower-left` - Image is anchored to the lower left corner of the window,
+///     preserving the aspect ratio.
+///   * `lower-right` - Image is anchored to the lower right corner of the window,
+///     preserving the aspect ratio.
 ///
 @"background-image-mode": BackgroundImageMode = .zoomed,
 
@@ -5917,6 +5925,10 @@ pub const BackgroundImageMode = enum(u8) {
     stretched = 1,
     tiled = 2,
     centered = 3,
+    upper_left = 4,
+    upper_right = 5,
+    lower_left = 6,
+    lower_right = 7,
 };
 
 /// See freetype-load-flag
